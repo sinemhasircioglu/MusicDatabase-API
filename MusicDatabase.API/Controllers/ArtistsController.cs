@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MusicDatabase.API.Data;
@@ -59,6 +60,7 @@ namespace MusicDatabase.API.Controllers
         
         // POST: api/Artists
         [HttpPost]
+        [Authorize]
         public IActionResult Post([FromBody]Artist artist)
         {
             if (artist == null) return BadRequest(new BaseAPIResponse()
@@ -89,6 +91,7 @@ namespace MusicDatabase.API.Controllers
         
         // PUT: api/Artists/5
         [HttpPut("{id}")]
+        [Authorize]
         public IActionResult Put(int? id, [FromBody]Artist newArtist)
         {
             if (!id.HasValue) return BadRequest(new BaseAPIResponse()
@@ -121,6 +124,7 @@ namespace MusicDatabase.API.Controllers
         
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
+        [Authorize]
         public IActionResult Delete(int? id)
         {
             if (!id.HasValue) return BadRequest(new BaseAPIResponse()

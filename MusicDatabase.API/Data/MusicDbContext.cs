@@ -20,5 +20,6 @@ namespace MusicDatabase.API.Data
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Lyric> Lyrics { get; set; }
         public DbSet<Song> Songs { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
