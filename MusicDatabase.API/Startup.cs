@@ -13,7 +13,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using MusicDatabase.API.Data;
 using Swashbuckle.AspNetCore.Swagger;
-
+ 
 namespace MusicDatabase.API
 {
     public class Startup
