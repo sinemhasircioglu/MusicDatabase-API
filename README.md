@@ -41,6 +41,9 @@ dotnet ef database update
 ```
 dotnet run
 ```
+## Demo
+
+You can try it on [this demo link.](http://musicdatabase.azurewebsites.net/swagger/) :gun:
 
 ## Built With
 
